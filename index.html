@@ -4,16 +4,30 @@
     <meta charset="utf-8">
     <title>Asteroids</title>
     <link rel="stylesheet" type="text/css" href="game_style.css">
+    <script type="application/javascript" src="vendor/keymaster.js"></script>
+
+    <script type="application/javascript" src="lib/util.js"></script>
+    <script type="application/javascript" src="lib/moving_object.js"></script>
+    <script type="application/javascript" src="lib/asteroid.js"></script>
+    <script type="application/javascript" src="lib/ship.js"></script>
+    <script type="application/javascript" src="lib/bullet.js"></script>
+    <script type="application/javascript" src="lib/game.js"></script>
+    <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
-    <canvas id="game" class="canvas" width="800" height="500"></canvas>
-
+    <div class="background">
+      <canvas id="game" class="canvas" width="800" height="500"></canvas>
+    </div>
+    
     <script type="application/javascript">
       (function () {
         var canvasEl = document.getElementsByTagName("canvas")[0];
-        canvasEl.width = 800;
-        canvasEl.height = 500;
+        canvasEl.width = Asteroids.Game.DIM_X;
+        canvasEl.height = Asteroids.Game.DIM_Y;
+
         var ctx = canvasEl.getContext("2d");
+        var game = new Asteroids.Game();
+        new Asteroids.GameView(game, ctx).start();
       })();
     </script>
   </body>
