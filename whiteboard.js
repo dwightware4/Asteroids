@@ -1,43 +1,7 @@
-(function() {
-  if(typeof Asteroids === 'undefined'){
-    window.Asteroids = {};
-  }
-
-  var GameView = Asteroids.GameView = function(game, ctx) {
-    this.ctx = ctx;
-    this.game = game;
-    this.ship = this.game.addShip();
-    this.timerId = null;
-  };
-
-  GameView.MOVES = {
-    'w': [0, -1],
-    'a': [-1, 0],
-    's': [0, 1],
-    'd': [1, 0]
-  };
-
-  GameView.prototype.bindKeyHandlers = function() {
-    var ship = this.ship;
-    Object.keys(GameView.MOVES).forEach(function(k){
-      var move = GameView.MOVES[k];
-      key(k, function() {ship.power(move); });
-    });
-    key('space', function() {ship.fireBullet(); });
-  };
-
-  GameView.prototype.start = function() {
-    var gameView = this;
-    this.timerId = setInterval(
-      function() {
-        gameView.game.step();
-        gameView.game.draw(gameView.ctx);
-      }, 1000 / Asteroids.Game.FPS
-    );
-    this.bindKeyHandlers();
-  };
-
-  GameView.prototype.stop = function() {
-    clearInterval(this.timerId);
-  };
-}());
+Ship.prototype.draw = function(ctx) {
+  ctx.beginPath();
+  ctx.arc(
+    this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true
+  );
+  ctx.drawImage(Ship.IMAGE, this.pos[0], this.pos[1], 50, 50);
+};
