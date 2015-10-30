@@ -55,6 +55,7 @@
 
   // handle keydown event
   function dispatch(event, scope){
+    window.actionType = event.type;
     var key, handler, k, i, modifiersMatch;
     key = event.keyCode;
 
@@ -206,6 +207,7 @@
 
   // set the handlers globally on document
   addEvent(document, 'keydown', function(event) { dispatch(event, _scope); }); // Passing _scope to a callback to ensure it remains the same by execution. Fixes #48
+  addEvent(document, 'keyup', function(event) { dispatch(event, _scope); });
   addEvent(document, 'keyup', clearModifier);
 
   // reset modifiers to false whenever the window is (re)focused.
