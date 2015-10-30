@@ -2,11 +2,20 @@ html {
   background-color: black;
 }
 
+.header {
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-family: sans-serif;
+  font-size: 25px;
+}
+
 .canvas {
   border: 10px solid white;
   padding-left: 0;
   padding-right: 0;
   margin-right: auto;
   margin-left: auto;
+  margin-top: 10vh;
   display: block;
 }
