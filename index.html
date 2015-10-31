@@ -14,6 +14,10 @@
     <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
+    <audio loop src="audio/bg_music.wav"></audio>
+    <audio id="laser" src="audio/laser.mp3"></audio>
+    <audio id="thrust" src="audio/thrust.mp3"></audio>
+    <audio id="explosion" src="audio/explosion.mp3"></audio>
     <script>
       WebFontConfig = {
         custom: {
@@ -21,7 +25,7 @@
           urls: ['game_style.css']
         },
         active: function() {
-          var canvasEl = document.getElementById("game");
+          var canvasEl = document.getElementById("game")
           var ctx = canvasEl.getContext("2d");
           ctx.canvas.width  = window.innerWidth;
           ctx.canvas.height = window.innerHeight;
