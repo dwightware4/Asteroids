@@ -14,10 +14,6 @@
     <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
-    <div class="header">
-      ASTEROIDS: Created by Dwight Ware in October, 2015.
-    </div>
-
     <canvas id="game" class="canvas" width="1000" height="600"></canvas>
 
     <script type="application/javascript">
@@ -25,7 +21,7 @@
         var canvasEl = document.getElementById("game");
         var ctx = canvasEl.getContext("2d");
         var game = new Asteroids.Game();
-        new Asteroids.GameView(game, ctx).start();
+        new Asteroids.GameView(game, ctx).intro();
       })();
     </script>
   </body>

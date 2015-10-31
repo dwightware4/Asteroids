@@ -1,13 +1,10 @@
-html {
-  background-color: black;
+@font-face {
+    font-family: 'tron';
+    src: url('vendor/Tr2n.ttf');
 }
 
-.header {
-  color: white;
-  text-align: center;
-  padding: 15px;
-  font-family: sans-serif;
-  font-size: 25px;
+html {
+  background-color: black;
 }
 
 .canvas {
