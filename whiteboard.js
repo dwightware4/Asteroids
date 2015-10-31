@@ -1,7 +1,11 @@
-Ship.prototype.draw = function(ctx) {
-  ctx.beginPath();
-  ctx.arc(
-    this.pos[0], this.pos[1], this.radius, 0, 2 * Math.PI, true
-  );
-  ctx.drawImage(Ship.IMAGE, this.pos[0], this.pos[1], 50, 50);
-};
+if(key.isPressed('space')) {
+  this.ship.fireBullet();
+}else if(key.isPressed('w')) {
+  this.ship.accelerate();
+}else if(key.isPressed('a')) {
+  this.ship.turn(-1);
+}else if(key.isPressed('s')) {
+  this.ship.brake();
+}else if(key.isPressed('d')) {
+  this.ship.turn(1);
+}
