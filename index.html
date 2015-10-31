@@ -23,6 +23,8 @@
         active: function() {
           var canvasEl = document.getElementById("game");
           var ctx = canvasEl.getContext("2d");
+          ctx.canvas.width  = window.innerWidth;
+          ctx.canvas.height = window.innerHeight;
           var game = new Asteroids.Game();
           var gameView = new Asteroids.GameView(game, ctx);
           game.gameView = gameView;
@@ -31,6 +33,6 @@
       };
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <canvas id="game" class="canvas" width="1000" height="600"></canvas>
+    <canvas id="game" class="canvas"></canvas>
   </body>
 </html>
