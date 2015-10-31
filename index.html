@@ -14,15 +14,21 @@
     <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
-    <canvas id="game" class="canvas" width="1000" height="600"></canvas>
-
-    <script type="application/javascript">
-      (function () {
-        var canvasEl = document.getElementById("game");
-        var ctx = canvasEl.getContext("2d");
-        var game = new Asteroids.Game();
-        new Asteroids.GameView(game, ctx).intro();
-      })();
+    <script>
+      WebFontConfig = {
+        custom: {
+          families: ['tron'],
+          urls: ['game_style.css']
+        },
+        active: function() {
+          var canvasEl = document.getElementById("game");
+          var ctx = canvasEl.getContext("2d");
+          var game = new Asteroids.Game();
+          new Asteroids.GameView(game, ctx).intro();
+        }
+      };
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+    <canvas id="game" class="canvas" width="1000" height="600"></canvas>
   </body>
 </html>
