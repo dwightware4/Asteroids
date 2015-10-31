@@ -24,7 +24,9 @@
           var canvasEl = document.getElementById("game");
           var ctx = canvasEl.getContext("2d");
           var game = new Asteroids.Game();
-          new Asteroids.GameView(game, ctx).intro();
+          var gameView = new Asteroids.GameView(game, ctx);
+          game.gameView = gameView;
+          gameView.intro();
         }
       };
     </script>
