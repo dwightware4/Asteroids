@@ -15,7 +15,7 @@
     <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
-    <audio id="bg" loop src="audio/bgMusic.wav"></audio>
+    <audio id="bg" autoplay loop src="audio/bgMusic.wav"></audio>
     <audio id="laser" src="audio/laser.mp3"></audio>
     <audio id="thrust" src="audio/thrust.mp3"></audio>
     <audio id="explosion" src="audio/explosion.wav"></audio>
@@ -27,7 +27,7 @@
     bgAudio.volume = 0.3;
       WebFontConfig = {
         custom: {
-          families: ['tron'],
+          families: ['gameFont'],
           urls: ['game_style.css']
         },
         active: function() {
