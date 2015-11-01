@@ -10,3 +10,7 @@ html, body {
   margin: 0px;
   overflow: hidden;
 }
+
+#bg {
+  volume: 0.5;
+}

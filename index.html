@@ -15,13 +15,16 @@
     <script type="application/javascript" src="lib/game_view.js"></script>
   </head>
   <body>
-    <!-- <audio autoplay loop src="audio/bg_music.wav"></audio> -->
+    <audio id="bg" autoplay loop src="audio/bgMusic.wav"></audio>
     <audio id="laser" src="audio/laser.mp3"></audio>
     <audio id="thrust" src="audio/thrust.mp3"></audio>
     <audio id="explosion" src="audio/explosion.wav"></audio>
     <audio id="shield" src="audio/shield.mp3"></audio>
-    <audio id="gameOver" src="audio/game_over.mp3"></audio>
+    <audio id="gameOver" src="audio/gameOver.mp3"></audio>
+    <audio id="levelUp" src="audio/levelUp.mp3"></audio>
     <script>
+    bgAudio = document.getElementById('bg');
+    bgAudio.volume = 0.3;
       WebFontConfig = {
         custom: {
           families: ['tron'],
