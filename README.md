@@ -13,7 +13,7 @@ This is a modern implementation of the classic game, Asteroids. It is written in
 Polymorphic classes help keep my code DRY and easy to maintain!
 ![alt text](screenshots/poly.png)
 
-Setting constants as instance variables makes modifying behavior quick and painless!
+Setting constants as instance variables (`this.speed`) makes modifying behavior quick and painless!
 ![alt text](screenshots/ship.png)
 
 ## To-Do Items
