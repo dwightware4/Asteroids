@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Asteroids</title>
-    <link rel="stylesheet" type="text/css" href="game_style.css">
-    <script type="application/javascript" src="vendor/keymaster.js"></script>
-    <script type="application/javascript" src="lib/util.js"></script>
-    <script type="application/javascript" src="lib/moving_object.js"></script>
-    <script type="application/javascript" src="lib/asteroid.js"></script>
-    <script type="application/javascript" src="lib/ship.js"></script>
-    <script type="application/javascript" src="lib/bullet.js"></script>
-    <script type="application/javascript" src="lib/game.js"></script>
-    <script type="application/javascript" src="lib/sprites/thrust.js"></script>
-    <script type="application/javascript" src="lib/sprites/explosion.js"></script>
-    <script type="application/javascript" src="lib/game_view.js"></script>
-    <script>
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-    ga('create', 'UA-69681051-1', 'auto');
-    ga('send', 'pageview');
-  </script>
-  </head>
-  <body>
-    <audio id="bg" autoplay loop src="audio/bgMusic.wav"></audio>
-    <audio id="laser" src="audio/laser.mp3"></audio>
-    <audio id="thrust" src="audio/thrust.mp3"></audio>
-    <audio id="explosion" src="audio/explosion.wav"></audio>
-    <audio id="damage" src="audio/damage.wav"></audio>
-    <audio id="gameOver" src="audio/gameOver.mp3"></audio>
-    <audio id="levelUp" src="audio/levelUp.mp3"></audio>
-    <script>
-    bgAudio = document.getElementById('bg');
-    bgAudio.volume = 0.3;
-      WebFontConfig = {
-        custom: {
-          families: ['gameFont'],
-          urls: ['game_style.css']
-        },
-        active: function() {
-          var canvasEl = document.getElementById("game")
-          var ctx = canvasEl.getContext("2d");
-          ctx.canvas.width  = window.innerWidth;
-          ctx.canvas.height = window.innerHeight;
-          var game = new Asteroids.Game();
-          var gameView = new Asteroids.GameView(game, ctx);
-          game.gameView = gameView;
-          gameView.intro();
-        }
-      };
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
-    <canvas id="game" class="canvas"></canvas>
-  </body>
+	<head>
+		<meta charset="utf-8">
+		<title>Asteroids</title>
+		<link rel="stylesheet" type="text/css" href="game_style.css">
+		<script type="application/javascript" src="vendor/keymaster.js"></script>
+		<script type="application/javascript" src="lib/util.js"></script>
+		<script type="application/javascript" src="lib/moving_object.js"></script>
+		<script type="application/javascript" src="lib/asteroid.js"></script>
+		<script type="application/javascript" src="lib/ship.js"></script>
+		<script type="application/javascript" src="lib/bullet.js"></script>
+		<script type="application/javascript" src="lib/game.js"></script>
+		<script type="application/javascript" src="lib/sprites/thrust.js"></script>
+		<script type="application/javascript" src="lib/sprites/explosion.js"></script>
+		<script type="application/javascript" src="lib/game_view.js"></script>
+		<script>
+			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+				(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+			})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			ga('create', 'UA-69681051-2', 'auto');
+			ga('send', 'pageview');
+		</script>
+	</head>
+	<body>
+		<audio id="bg" autoplay loop src="audio/bgMusic.wav"></audio>
+		<audio id="laser" src="audio/laser.mp3"></audio>
+		<audio id="thrust" src="audio/thrust.mp3"></audio>
+		<audio id="explosion" src="audio/explosion.wav"></audio>
+		<audio id="damage" src="audio/damage.wav"></audio>
+		<audio id="gameOver" src="audio/gameOver.mp3"></audio>
+		<audio id="levelUp" src="audio/levelUp.mp3"></audio>
+		<script>
+		bgAudio = document.getElementById('bg');
+		bgAudio.volume = 0.3;
+		WebFontConfig = {
+			custom: {
+				families: ['gameFont'],
+				urls: ['game_style.css']
+			},
+			active: function() {
+				var canvasEl = document.getElementById("game")
+				var ctx = canvasEl.getContext("2d");
+				ctx.canvas.width	= window.innerWidth;
+				ctx.canvas.height = window.innerHeight;
+				var game = new Asteroids.Game();
+				var gameView = new Asteroids.GameView(game, ctx);
+				game.gameView = gameView;
+				gameView.intro();
+			}
+		};
+		</script>
+		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.5.18/webfont.js"></script>
+		<canvas id="game" class="canvas"></canvas>
+	</body>
 </html>
