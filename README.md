@@ -1,5 +1,6 @@
 # Asteroids
 
+To play the game, simply clone this repo and open index.html in a modern browser.
 <!-- [Link to Live Game][asteroids] -->
 
 <!-- [asteroids]: http://www.dwightware.com/Asteroids -->
