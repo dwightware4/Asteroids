@@ -1,8 +1,8 @@
 # Asteroids
 
-[Link to Live Game][asteroids]
+<!-- [Link to Live Game][asteroids] -->
 
-[asteroids]: http://www.dwightware.com/Asteroids
+<!-- [asteroids]: http://www.dwightware.com/Asteroids -->
 
 ## About
 
